@@ -1,25 +1,22 @@
-# react-makes-you-sad
-Here’s a flowchart to make you happy again!
+# react-vous-rend-triste
+Voici un diagramme pour vous rendre heureux à nouveau !
 
-## <a href='https://cdn.rawgit.com/gaearon/react-makes-you-sad/1377b6a6cdc644adfea6bf238f06c75d33ed6f1e/fatigue.svg' target='_blank'>Open in a new tab</a>
+## <a href='https://cdn.rawgit.com/gaearon/react-makes-you-sad/1377b6a6cdc644adfea6bf238f06c75d33ed6f1e/fatigue.svg' target='_blank'>Ouvrir dans un nouvel onglet</a>
 
 <img src='https://cdn.rawgit.com/gaearon/react-makes-you-sad/1377b6a6cdc644adfea6bf238f06c75d33ed6f1e/fatigue.svg'>
 
-## Credits
+## Attributions
 
-Based on and inspired by https://github.com/petehunt/react-howto
+Basé sur et inspiré par https://github.com/petehunt/react-howto
+Traduit de l'anglais de https://github.com/gaearon/react-makes-you-sad
 
-## Contributing
+## Contribuer
 
-1. Edit the `.dot` file with https://atom.io/packages/graphviz-preview
-2. Install `dot` from http://www.graphviz.org/Download.php 
-3. Generate the `.svg` with `dot -Tsvg fatigue.dot > fatigue.svg`
-4. Send a PR!
+1. Éditez le fichier `.dot` avec https://atom.io/packages/graphviz-preview
+2. Installez `dot` depuis http://www.graphviz.org/Download.php
+3. Générez le `.svg` avec `dot -Tsvg fatigue.dot > fatigue.svg`
+4. Envoyez une pull request!
 
-## Translation
-
-- [简体中文](https://github.com/wyvernnot/react-makes-you-sad)
-
-## License
+## Licence
 
 [CC0](https://wiki.creativecommons.org/wiki/CC0)

@@ -2,7 +2,7 @@ digraph {
   unhappy[
     shape="box",
     style=rounded,
-    label="React makes you sad."
+    label="React vous rend triste."
   ]
   unhappy -> are_you_using_react_boilerplates;
 
@@ -10,45 +10,51 @@ digraph {
 
   are_you_using_react_boilerplates[
     shape="diamond",
-    label="Are you learning
-    React by copying from the
-    boilerplate projects?"
+    label="Apprenez-vous React
+    en copiant du code-modèle ?"
   ]
-  are_you_using_react_boilerplates -> boilerplates_dont_teach[label="yes"]
-  are_you_using_react_boilerplates -> steal_from_boilerplates[label="no"]
+  are_you_using_react_boilerplates -> boilerplates_dont_teach[label="oui"]
+  are_you_using_react_boilerplates -> steal_from_boilerplates[label="non"]
 
   boilerplates_dont_teach[
     shape="box",
-    label="Learning React by copying boilerplates
-    is like learning to cook by eating food in
-    fancy restaurants. It doesn’t work. You need
-    to start with basics and ignore the fear of
-    missing out. It’s unfounded. People create
-    boilerplates to show off what they built
-    or learned, not to help you learn. They are
-    created by and for power users, and are often
-    way more experimental than they care to admit.
-    Boilerplates compete for attention which leads
-    to more bloat. If you’re in it for React, learn
-    it in the order Pete Hunt described in his guide:
-    https://github.com/petehunt/react-howto.
-    Look at boilerplates no sooner than you can
-    create your own."
+    label="Apprendre React en copiant du code-modèle,
+    c'est comme apprendre à cuisiner en mangeant
+    dans des restaurants gastronomiques. Ça ne marche pas.
+    Vous devez débuter par les bases et ignorer la peur
+    infondée de passer à côté de quelque-chose.
+    Les gens créent des modèles de code pour montrer
+    ce qu'ils savent faire ou ce qu'ils ont appris,
+    pas pour vous aider à apprendre. Ils sont créés
+    pour et par des utilisateurs expérimentés, et
+    sont souvent bien plus expérimentaux qu'ils
+    ne veulent bien l'admettre. Les différents
+    codes-modèles concourrent pour avoir de l'attention,
+    ce qui mène à plus de surcharge. Si vous voulez
+    vraiment apprendre React, apprenez-le dans
+    l'ordre préconisé par Pete Hunt dans son guide :
+    https://github.com/petehunt/react-howto (en anglais).
+    Ne regardez pas du code-modèle avant de
+    savoir en créer."
   ]
   boilerplates_dont_teach -> are_you_using_flux
 
   steal_from_boilerplates[
     shape="box",
-    label="While boilerplates are not a good
-    way to learn the technologies they combine,
-    they are useful to see how these technologies
-    can be tied together *after* you’re comfortable
-    with each of them independently. It’s a great
-    way to discover new technologies but you
-    shouldn’t feel obligated to use them at all.
-    Don’t give up on boilerplates completely.
-    Just keep in mind that a boilerplate is
-    a bag of tricks, not a solid base for your app."
+    label="Le code-modèle n'est pas une bonne
+    manière d'apprendre les technologies qui
+    y sont combinées. Pourtant, il est utile de
+    voir comment ces technologies peuvent être
+    utilisées ensemble *une fois que* vous êtes
+    à l'aise avec chacune d'entre elles
+    séparément. C'est une bonne façon de
+    découvrir de nouvelles technologies mais vous
+    ne devriez pas vous sentir obligés de toutes
+    les utiliser. N'abandonnez pas totalement
+    le code-modèle. Gardez juste à l'esprit
+    qu'un modèle de code n'est qu'une liste
+    d'astuces, pas une base solide pour votre
+    application."
   ]
   steal_from_boilerplates -> are_you_using_flux
 
@@ -56,47 +62,48 @@ digraph {
 
   are_you_using_flux[
     shape="diamond",
-    label="Are you using
-    a Flux library
-    (or Redux)?"
+    label="Utilisez-vous une librairie
+    Flux (ou Redux) ?"
   ]
-  are_you_using_flux -> is_too_much_flux[label="yes"]
-  are_you_using_flux -> is_not_enough_flux[label="no"]
+  are_you_using_flux -> is_too_much_flux[label="oui"]
+  are_you_using_flux -> is_not_enough_flux[label="non"]
 
   is_too_much_flux[
     shape="diamond",
-    label="Does it add
-    a lot of boilerplate
-    for no obvious gain?"
+    label="Est-ce qu'elle ajoute beaucoup
+    de répétitions sans régler de
+    problèmes évidents ?"
   ]
-  is_too_much_flux -> remove_flux[label="yes"]
-  is_too_much_flux -> are_you_using_bundler[label="no"]
+  is_too_much_flux -> remove_flux[label="oui"]
+  is_too_much_flux -> are_you_using_bundler[label="non"]
 
   is_not_enough_flux[
     shape="diamond",
-    label="Do you have a few
-    bloated stateful components at the top
-    of your component hierarchy that are
-    often the source of bugs?"
+    label="Avez-vous quelques composants
+    à états surchargés en haut de votre
+    hiérarchie de composants, qui sont
+    souvent à la source de bugs ?"
   ]
-  is_not_enough_flux -> add_flux[label="yes"]
-  is_not_enough_flux -> are_you_using_bundler[label="no"]
+  is_not_enough_flux -> add_flux[label="oui"]
+  is_not_enough_flux -> are_you_using_bundler[label="non"]
 
   add_flux[
     shape="box",
-    label="Consider adding a Flux library.
-    It can help externalize the state
-    shared between many components
-    and update it consistently."
+    label="Réfléchissez à ajouter une librairie Flux.
+    Elle peut vous aider à externaliser les états
+    partagés entre beaucoup de composants et à les
+    maintenir à jour de manière cohérente."
   ]
   add_flux -> are_you_using_bundler
 
   remove_flux[
     shape="box",
-    label="Remove the Flux library.
-    Get a good feel for structuring
-    apps in vanilla React by reading
-    “Thinking in React” in the official docs."
+    label="Supprimez la librairie Flux.
+    Acquérez une bonne intuition de la manière
+    dont il faut structurer les applications
+    React de base en lisant
+    « Thinking in React » (en anglais)
+    dans la documentation officielle."
   ]
   remove_flux -> are_you_using_bundler
 
@@ -104,50 +111,51 @@ digraph {
 
   are_you_using_bundler[
     shape="diamond",
-    label="Are you using
-    a JavaScript bundler
-    (e.g. Webpack, Browserify)?"
+    label="Utilisez vous un paqueteur JavaScript
+    (par exemple Webpack ou Browserify) ?"
   ]
-  are_you_using_bundler -> are_you_working_on_production_app_with_bundler[label="yes"]
-  are_you_using_bundler -> are_you_working_on_production_app_without_bundler[label="no"]
+  are_you_using_bundler -> are_you_working_on_production_app_with_bundler[label="oui"]
+  are_you_using_bundler -> are_you_working_on_production_app_without_bundler[label="non"]
 
   are_you_working_on_production_app_with_bundler[
     shape="diamond",
-    label="Are you working
-    on a production app?"
+    label="Travaillez-vous sur une
+    application en production ?"
   ]
-  are_you_working_on_production_app_with_bundler -> do_you_know_es2015[label="yes"]
-  are_you_working_on_production_app_with_bundler -> remove_bundler[label="no"]
+  are_you_working_on_production_app_with_bundler -> do_you_know_es2015[label="oui"]
+  are_you_working_on_production_app_with_bundler -> remove_bundler[label="non"]
 
   are_you_working_on_production_app_without_bundler[
     shape="diamond",
-    label="Are you working
-    on a production app?"
+    label="Travaillez-vous sur une
+    application en production ?"
   ]
-  are_you_working_on_production_app_without_bundler -> add_bundler[label="yes"]
-  are_you_working_on_production_app_without_bundler -> do_you_know_es2015[label="no"]
+  are_you_working_on_production_app_without_bundler -> add_bundler[label="oui"]
+  are_you_working_on_production_app_without_bundler -> do_you_know_es2015[label="non"]
 
   add_bundler[
     shape="box",
-    label="Add a bundler as a build step
-    to keep dependencies manageable
-    and serve the JavaScript code efficiently.
-    Use Google Page Speed insights tool
-    to gauge how well you are doing.
-    Remember to minify and envify
-    your code."
+    label="Ajoutez un paqueteur comme une
+    étape de votre build pour mieux gérer
+    vos dépendances et distribuer le code
+    JavaScript efficacement. Utilisez l'outil
+    Google Page Speed insights pour jauger
+    votre efficacité. N'oubliez pas de passer
+    votre code à travers des outils
+    minify et envify."
   ]
   add_bundler -> do_you_know_es2015
 
   remove_bundler[
     shape="box",
-    label="There is no need for a bundler
-    if you are just learning React.
-    Copy https://github.com/jarsbe/react-simple
-    and start hacking with no build step.
-    Use <script> tags until you are comfortable
-    with React and want to learn more about module
-    systems and different bundlers."
+    label="Pas besoin de paqueteur si vous
+    êtes en train d'apprendre React.
+    Copiez https://github.com/jarsbe/react-simple
+    et commencez à bidouiller sans faire de build.
+    Utilisez des balises <script> jusqu'à ce
+    que vous soyez à l'aise avec React et que vous
+    vouliez en apprendre plus sur les systèmes de
+    modules et les paqueteurs."
   ]
   remove_bundler -> do_you_know_es2015
 
@@ -155,25 +163,28 @@ digraph {
 
   do_you_know_es2015[
     shape="diamond",
-    label="Do you feel
-    comfortable using ES2015 features
-    (e.g. classes and fat arrows)?"
+    label="Vous sentez-vous à l'aise
+    avec les fonctionnalités ES2015
+    (par exemple les classes et les
+    fonctions fléchées) ?"
   ]
-  do_you_know_es2015 -> use_es5[label="no"]
-  do_you_know_es2015 -> are_you_using_dangerous_features[label="yes"]
+  do_you_know_es2015 -> use_es5[label="non"]
+  do_you_know_es2015 -> are_you_using_dangerous_features[label="oui"]
 
   use_es5[
     shape="box",
-    label="Don’t use ES2015 yet.
-    You don’t need it to learn React.
-    Third-party libraries will often use
-    ES2015 syntax in their documentation but
-    you don’t need third-party libraries when
-    you are just learning React itself.
-    When you feel like updating your JavaScript
-    knowledge, https://leanpub.com/understandinges6/read
-    is an amazing guide. Use http://babeljs.io/repl
-    to verify your assumptions."
+    label="N'utilisez pas encore ES2015.
+    Vous n'en avez pas besoin pour apprendre React.
+    Les librairies tierces utiliseront souvent la
+    syntaxe ES2015 dans leur documentation mais
+    vous n'avez pas besoin de librairies tierces
+    lorsque vous apprenez uniquement React.
+    Lorsque vous voudrez rafraîchir
+    vos connaissances sur JavaScript,
+    https://leanpub.com/understandinges6/read
+    est un guide fabuleux. Servez-vous de
+    http://babeljs.io/repl pour tester vos
+    suppositions."
   ]
   use_es5 -> do_you_update_packages_asap
 
@@ -181,28 +192,30 @@ digraph {
 
   are_you_using_dangerous_features[
     shape="diamond",
-    label="Are you using
-    experimental language features
-    that didn’t make it into ES2015
-    (e.g. decorators)?"
+    label="Utilisez-vous des
+    fonctionnalités expérimentales
+    du langage qui n'ont pas été
+    incluses dans ES2015
+    (par exemple les décorateurs) ?"
   ]
-  are_you_using_dangerous_features -> can_you_spend_days_on_your_tooling[label="yes"]
-  are_you_using_dangerous_features -> do_you_update_packages_asap[label="no"]
+  are_you_using_dangerous_features -> can_you_spend_days_on_your_tooling[label="oui"]
+  are_you_using_dangerous_features -> do_you_update_packages_asap[label="non"]
 
   can_you_spend_days_on_your_tooling[
     shape="diamond",
-    label="Can you spend days on
-    fixing your tooling every few weeks
-    due to bugs, incompatibilities,
-    and standard changes?"
+    label="Pouvez-vous vous permettre
+    de passer des jours à corriger votre
+    outillage toutes les quelques semaines
+    à cause de bugs, d'incompatibilités
+    et de changements des standards ?"
   ]
-  can_you_spend_days_on_your_tooling -> do_you_update_packages_asap[label="yes"]
-  can_you_spend_days_on_your_tooling -> stick_to_es2015[label="no"]
+  can_you_spend_days_on_your_tooling -> do_you_update_packages_asap[label="oui"]
+  can_you_spend_days_on_your_tooling -> stick_to_es2015[label="non"]
 
   stick_to_es2015[
     shape="box",
-    label="Stick to using at most ES2015,
-    JSX, and object spread operator."
+    label="Restez-en à ES2015, JSX et
+    l'opérateur de propagation d'objets."
   ]
   stick_to_es2015 -> do_you_update_packages_asap
 
@@ -210,40 +223,46 @@ digraph {
 
   do_you_update_packages_asap[
     shape="diamond",
-    label="Do you update to new
-    major versions of your dependencies
-    as they come out?"
+    label="Mettez-vous à jour vos dépendances
+    vers les nouvelles versions majeures
+    dès qu'elles sortent ?"
   ]
-  do_you_update_packages_asap -> give_it_two_months[label="yes"]
-  do_you_update_packages_asap -> consider_updating_react[label="no"]
+  do_you_update_packages_asap -> give_it_two_months[label="oui"]
+  do_you_update_packages_asap -> consider_updating_react[label="non"]
 
   give_it_two_months[
     shape="box",
-    label="Unless we are talking about React
-    which is tested heavily before every release,
-    consider slowing down rate of package updates.
-    You can try new versions of the dependencies but
-    it’s best to keep them in a branch for a couple of
-    months until the community finds and fixes the
-    most common issues. Don’t make decisions based on
-    the fear of missing out! When looking for older docs,
-    don’t forget to check tagged releases on GitHub, e.g.
+    label="À moins que nous ne parlions de React
+    qui est testé lourdement avant chaque sortie,
+    réfléchissez à ralentir votre rythme de mise
+    à jour de paquets. Vous pouvez essayer les
+    nouvelles versions des dépendances mais c'est
+    mieux de les garder dans une branche à part
+    pour quelques mois pendant que la communauté
+    cherche et corrige les problèmes les plus
+    courants. Ne prenez pas de décisions en ayant
+    peur de passer à côté de quelque-chose ! Si
+    vous cherchez de la documentation plus vieille,
+    n'oubliez pas de regarder les anciennes
+    sorties de versions sur GitHub, par exemple
     https://github.com/reactjs/react-router/tree/0.13.x/doc"
   ]
   give_it_two_months -> are_you_still_sad
 
   consider_updating_react[
     shape="box",
-    label="This is a good call.
-    However we encourage you to
-    try (in a branch!) new versions of
-    React as soon as they come out.
-    Unlike many community packages,
-    they are tested heavily by Facebook.
-    Keep an eye on the release notes
-    as they link to the codemods that
-    automate parts of the migration process
-    for you."
+    label="C'est judicieux. Cependant,
+    nous vous encourageons à essayer
+    (dans une branche à part !) les
+    nouvelles versions de React dès lors
+    qu'elles sortent. À l'inverse de
+    beaucoup de paquets de la communauté,
+    elles sont testées lourdement par
+    Facebook. Gardez un œil sur les
+    notes de version qui fournissent des
+    liens vers des codemods qui automatisent
+    des parties du processus de migration
+    pour vous."
   ]
   consider_updating_react -> are_you_still_sad
 
@@ -251,34 +270,35 @@ digraph {
 
   are_you_still_sad[
     shape="diamond",
-    label="Are you still sad?"
+    label="Êtes-vous toujours triste ?"
   ]
-  are_you_still_sad -> rant[label="yes"];
-  are_you_still_sad -> happy[label="no"];
+  are_you_still_sad -> rant[label="oui"];
+  are_you_still_sad -> happy[label="non"];
 
   rant[
     shape="box",
-    label="Write a constructive blog post
-    about the problems you encountered.
-    Refrain from personal attacks.
-    Be polite. Help the community
-    figure out the solutions. Consider
-    another stack that better suits
-    your needs (e.g. Ember)."
+    label="Écrivez un billet de blog
+    constructif sur les problèmes rencontrés.
+    Abstenez-vous d'attaques personnelles.
+    Soyez poli. Aidez la communauté à
+    trouver des solutions. Pensez à
+    d'autres solutions qui remplissent
+    mieux vos besoins (comme Ember)."
   ]
   rant -> happy
 
   happy[
     shape="box",
-    label="React makes you happy!
-    Or, at least, it doesn’t make you that sad anymore."
+    label="React vous rend heureux !
+    Tout du moins, il ne vous rend plus aussi triste."
   ]
   happy -> share
 
   share [
     shape="box",
     style=rounded,
-    label="Share this flowchart: http://bit.ly/react-makes-you-sad.
-    Based on and inspired by https://github.com/petehunt/react-howto."
+    label="Partagez ce diagramme : http://bit.ly/react-vous-rend-triste.
+    Basé sur et inspiré par https://github.com/petehunt/react-howto.
+    Traduit de l'anglais de https://github.com/gaearon/react-makes-you-sad."
   ]
 }
