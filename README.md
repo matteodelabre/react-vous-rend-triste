@@ -1,13 +1,13 @@
 # react-vous-rend-triste
 Voici un diagramme pour vous rendre heureux à nouveau !
 
-## <a href='https://cdn.rawgit.com/gaearon/react-makes-you-sad/1377b6a6cdc644adfea6bf238f06c75d33ed6f1e/fatigue.svg' target='_blank'>Ouvrir dans un nouvel onglet</a>
+## <a href='https://cdn.rawgit.com/matteodelabre/react-vous-rend-triste/master/fatigue.svg' target='_blank'>Ouvrir dans un nouvel onglet</a>
 
-<img src='https://cdn.rawgit.com/gaearon/react-makes-you-sad/1377b6a6cdc644adfea6bf238f06c75d33ed6f1e/fatigue.svg'>
+<img src='https://cdn.rawgit.com/matteodelabre/react-vous-rend-triste/master/fatigue.svg'>
 
 ## Attributions
 
-Basé sur et inspiré par https://github.com/petehunt/react-howto
+Basé sur et inspiré par https://github.com/petehunt/react-howto  
 Traduit de l'anglais de https://github.com/gaearon/react-makes-you-sad
 
 ## Contribuer
