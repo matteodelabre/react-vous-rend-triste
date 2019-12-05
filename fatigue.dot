@@ -19,20 +19,20 @@ digraph {
   boilerplates_dont_teach[
     shape="box",
     label="Apprendre React en copiant du code-modèle,
-    c'est comme apprendre à cuisiner en mangeant
+    c’est comme apprendre à cuisiner en mangeant
     dans des restaurants gastronomiques. Ça ne marche pas.
     Vous devez débuter par les bases et ignorer la peur
     infondée de passer à côté de quelque-chose.
     Les gens créent des modèles de code pour montrer
-    ce qu'ils savent faire ou ce qu'ils ont appris,
+    ce qu’ils savent faire ou ce qu’ils ont appris,
     pas pour vous aider à apprendre. Ils sont créés
     pour et par des utilisateurs expérimentés, et
-    sont souvent bien plus expérimentaux qu'ils
-    ne veulent bien l'admettre. Les différents
-    codes-modèles concourrent pour avoir de l'attention,
-    ce qui mène à plus de surcharge. Si vous voulez
+    sont souvent bien plus expérimentaux qu’ils
+    ne veulent bien l’admettre. Les différents
+    codes-modèles concourent pour attirer l’attention,
+    ce qui mène à davantage de surcharge. Si vous voulez
     vraiment apprendre React, apprenez-le dans
-    l'ordre préconisé par Pete Hunt dans son guide :
+    l’ordre préconisé par Pete Hunt dans son guide :
     https://github.com/petehunt/react-howto (en anglais).
     Ne regardez pas du code-modèle avant de
     savoir en créer."
@@ -41,19 +41,19 @@ digraph {
 
   steal_from_boilerplates[
     shape="box",
-    label="Le code-modèle n'est pas une bonne
-    manière d'apprendre les technologies qui
+    label="Le code-modèle n’est pas une bonne
+    manière d’apprendre les technologies qui
     y sont combinées. Pourtant, il est utile de
     voir comment ces technologies peuvent être
     utilisées ensemble *une fois que* vous êtes
-    à l'aise avec chacune d'entre elles
-    séparément. C'est une bonne façon de
+    à l’aise avec chacune d’entre elles
+    séparément. C’est une bonne façon de
     découvrir de nouvelles technologies mais vous
     ne devriez pas vous sentir obligés de toutes
-    les utiliser. N'abandonnez pas totalement
-    le code-modèle. Gardez juste à l'esprit
-    qu'un modèle de code n'est qu'une liste
-    d'astuces, pas une base solide pour votre
+    les utiliser. N’abandonnez pas totalement
+    le code-modèle. Gardez juste à l’esprit
+    qu’un modèle de code n’est qu’une liste
+    d’astuces, pas une base solide pour votre
     application."
   ]
   steal_from_boilerplates -> are_you_using_flux
@@ -62,7 +62,7 @@ digraph {
 
   are_you_using_flux[
     shape="diamond",
-    label="Utilisez-vous une librairie
+    label="Utilisez-vous une bibliothèque
     Flux (ou Redux) ?"
   ]
   are_you_using_flux -> is_too_much_flux[label="oui"]
@@ -70,7 +70,7 @@ digraph {
 
   is_too_much_flux[
     shape="diamond",
-    label="Est-ce qu'elle ajoute beaucoup
+    label="Est-ce qu’elle ajoute beaucoup
     de répétitions sans régler de
     problèmes évidents ?"
   ]
@@ -79,18 +79,18 @@ digraph {
 
   is_not_enough_flux[
     shape="diamond",
-    label="Avez-vous quelques composants
-    à états surchargés en haut de votre
-    hiérarchie de composants, qui sont
-    souvent à la source de bugs ?"
+    label="Avez-vous en haut de votre hiérarchie
+    de composants quelques composants
+    surchargés, gérant beaucoup d’états,
+    qui sont souvent à la source de bogues ?"
   ]
   is_not_enough_flux -> add_flux[label="oui"]
   is_not_enough_flux -> are_you_using_bundler[label="non"]
 
   add_flux[
     shape="box",
-    label="Réfléchissez à ajouter une librairie Flux.
-    Elle peut vous aider à externaliser les états
+    label="Envisagez l’ajout d’une bibliothèque Flux.
+    Elle peut vous aider à extraire les états
     partagés entre beaucoup de composants et à les
     maintenir à jour de manière cohérente."
   ]
@@ -98,7 +98,7 @@ digraph {
 
   remove_flux[
     shape="box",
-    label="Supprimez la librairie Flux.
+    label="Supprimez la bibliothèque Flux.
     Acquérez une bonne intuition de la manière
     dont il faut structurer les applications
     React de base en lisant
@@ -111,7 +111,7 @@ digraph {
 
   are_you_using_bundler[
     shape="diamond",
-    label="Utilisez vous un paqueteur JavaScript
+    label="Utilisez vous un empaqueteur JavaScript
     (par exemple Webpack ou Browserify) ?"
   ]
   are_you_using_bundler -> are_you_working_on_production_app_with_bundler[label="oui"]
@@ -135,12 +135,12 @@ digraph {
 
   add_bundler[
     shape="box",
-    label="Ajoutez un paqueteur comme une
+    label="Ajoutez un empaqueteur comme une
     étape de votre build pour mieux gérer
     vos dépendances et distribuer le code
-    JavaScript efficacement. Utilisez l'outil
-    Google Page Speed insights pour jauger
-    votre efficacité. N'oubliez pas de passer
+    JavaScript efficacement. Utilisez l’outil
+    Google Page Speed Insights pour jauger
+    l’efficacité. N’oubliez pas de passer
     votre code à travers des outils
     minify et envify."
   ]
@@ -148,14 +148,14 @@ digraph {
 
   remove_bundler[
     shape="box",
-    label="Pas besoin de paqueteur si vous
-    êtes en train d'apprendre React.
+    label="Pas besoin d’empaqueteur si vous
+    êtes en train d’apprendre React.
     Copiez https://github.com/jarsbe/react-simple
     et commencez à bidouiller sans faire de build.
-    Utilisez des balises <script> jusqu'à ce
-    que vous soyez à l'aise avec React et que vous
+    Utilisez des balises <script> jusqu’à ce
+    que vous soyez à l’aise avec React et que vous
     vouliez en apprendre plus sur les systèmes de
-    modules et les paqueteurs."
+    modules et les empaqueteurs."
   ]
   remove_bundler -> do_you_know_es2015
 
@@ -163,7 +163,7 @@ digraph {
 
   do_you_know_es2015[
     shape="diamond",
-    label="Vous sentez-vous à l'aise
+    label="Vous sentez-vous à l’aise
     avec les fonctionnalités ES2015
     (par exemple les classes et les
     fonctions fléchées) ?"
@@ -173,18 +173,18 @@ digraph {
 
   use_es5[
     shape="box",
-    label="N'utilisez pas encore ES2015.
-    Vous n'en avez pas besoin pour apprendre React.
-    Les librairies tierces utiliseront souvent la
+    label="N’utilisez pas encore ES2015.
+    Vous n’en avez pas besoin pour apprendre React.
+    Les bibliothèques tierces utiliseront souvent la
     syntaxe ES2015 dans leur documentation mais
-    vous n'avez pas besoin de librairies tierces
+    vous n’avez pas besoin de bibliothèque tierces
     lorsque vous apprenez uniquement React.
     Lorsque vous voudrez rafraîchir
     vos connaissances sur JavaScript,
     https://leanpub.com/understandinges6/read
-    est un guide fabuleux. Servez-vous de
-    http://babeljs.io/repl pour tester vos
-    suppositions."
+    est un excellent guide. Servez-vous de
+    http://babeljs.io/repl pour tester les
+    nouvelles fonctionnalités."
   ]
   use_es5 -> do_you_update_packages_asap
 
@@ -194,7 +194,7 @@ digraph {
     shape="diamond",
     label="Utilisez-vous des
     fonctionnalités expérimentales
-    du langage qui n'ont pas été
+    du langage qui n’ont pas été
     incluses dans ES2015
     (par exemple les décorateurs) ?"
   ]
@@ -206,7 +206,7 @@ digraph {
     label="Pouvez-vous vous permettre
     de passer des jours à corriger votre
     outillage toutes les quelques semaines
-    à cause de bugs, d'incompatibilités
+    à cause de bugs, d’incompatibilités
     et de changements des standards ?"
   ]
   can_you_spend_days_on_your_tooling -> do_you_update_packages_asap[label="oui"]
@@ -215,7 +215,7 @@ digraph {
   stick_to_es2015[
     shape="box",
     label="Restez-en à ES2015, JSX et
-    l'opérateur de propagation d'objets."
+    l’opérateur de propagation d’objets."
   ]
   stick_to_es2015 -> do_you_update_packages_asap
 
@@ -225,7 +225,7 @@ digraph {
     shape="diamond",
     label="Mettez-vous à jour vos dépendances
     vers les nouvelles versions majeures
-    dès qu'elles sortent ?"
+    dès qu’elles sortent ?"
   ]
   do_you_update_packages_asap -> give_it_two_months[label="oui"]
   do_you_update_packages_asap -> consider_updating_react[label="non"]
@@ -234,16 +234,16 @@ digraph {
     shape="box",
     label="À moins que nous ne parlions de React
     qui est testé lourdement avant chaque sortie,
-    réfléchissez à ralentir votre rythme de mise
+    envisagez de ralentir votre rythme de mise
     à jour de paquets. Vous pouvez essayer les
-    nouvelles versions des dépendances mais c'est
+    nouvelles versions des dépendances mais c’est
     mieux de les garder dans une branche à part
     pour quelques mois pendant que la communauté
     cherche et corrige les problèmes les plus
     courants. Ne prenez pas de décisions en ayant
     peur de passer à côté de quelque-chose ! Si
     vous cherchez de la documentation plus vieille,
-    n'oubliez pas de regarder les anciennes
+    n’oubliez pas de regarder les anciennes
     sorties de versions sur GitHub, par exemple
     https://github.com/reactjs/react-router/tree/0.13.x/doc"
   ]
@@ -251,18 +251,16 @@ digraph {
 
   consider_updating_react[
     shape="box",
-    label="C'est judicieux. Cependant,
-    nous vous encourageons à essayer
-    (dans une branche à part !) les
-    nouvelles versions de React dès lors
-    qu'elles sortent. À l'inverse de
-    beaucoup de paquets de la communauté,
-    elles sont testées lourdement par
-    Facebook. Gardez un œil sur les
-    notes de version qui fournissent des
-    liens vers des codemods qui automatisent
-    des parties du processus de migration
-    pour vous."
+    label="C’est judicieux. Cependant, nous vous
+    encourageons à essayer (dans une branche à
+    part !) les nouvelles versions de React
+    dès leur sortie. Contrairement à beaucoup
+    de paquets de la communauté, elles sont
+    testées en profondeur par Facebook. Gardez
+    un œil sur les notes de version qui
+    fournissent des liens vers des scripts qui
+    automatisent des parties du processus de
+    migration à votre place."
   ]
   consider_updating_react -> are_you_still_sad
 
@@ -279,17 +277,17 @@ digraph {
     shape="box",
     label="Écrivez un billet de blog
     constructif sur les problèmes rencontrés.
-    Abstenez-vous d'attaques personnelles.
+    Abstenez-vous d’attaques personnelles.
     Soyez poli. Aidez la communauté à
-    trouver des solutions. Pensez à
-    d'autres solutions qui remplissent
+    trouver des solutions. Envisagez
+    d’autres solutions qui remplissent
     mieux vos besoins (comme Ember)."
   ]
   rant -> happy
 
   happy[
     shape="box",
-    label="React vous rend heureux !
+    label="React vous a redonné le sourire !
     Tout du moins, il ne vous rend plus aussi triste."
   ]
   happy -> share
@@ -299,6 +297,6 @@ digraph {
     style=rounded,
     label="Partagez ce diagramme : http://bit.ly/react-vous-rend-triste.
     Basé sur et inspiré par https://github.com/petehunt/react-howto.
-    Traduit de l'anglais de https://github.com/gaearon/react-makes-you-sad."
+    Traduit de l’anglais de https://github.com/gaearon/react-makes-you-sad."
   ]
 }
